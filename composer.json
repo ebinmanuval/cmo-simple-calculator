@@ -1,0 +1,8 @@
+{
+  "name": "ebin/simple-calculator",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}
