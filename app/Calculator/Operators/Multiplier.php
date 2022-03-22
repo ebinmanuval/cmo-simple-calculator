@@ -4,11 +4,10 @@ namespace App\Calculator\Operators;
 
 use App\Interfaces\OperatorInterface;
 
-
 class Multiplier implements OperatorInterface
 {
-  public function run($first, $second)
-  {
-    return $first * $second;
-  }
+    public function run($first, $second)
+    {
+        return $first * $second;
+    }
 }

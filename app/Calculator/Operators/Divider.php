@@ -6,8 +6,8 @@ use App\Interfaces\OperatorInterface;
 
 class Divider implements OperatorInterface
 {
-  public function run($first, $second)
-  {
-    return $first / $second;
-  }
+    public function run($first, $second)
+    {
+        return $first / $second;
+    }
 }

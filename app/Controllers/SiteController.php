@@ -10,7 +10,7 @@ use App\Calculator\Operators\Subtractor;
 use App\Interfaces\ControllerInterface;
 use App\Validators\CalculatorValidator;
 
-class SiteController  implements ControllerInterface
+class SiteController implements ControllerInterface
 {
     private $requestData;
 
@@ -32,18 +32,17 @@ class SiteController  implements ControllerInterface
             $validator = CalculatorValidator::validate($this->requestData);
 
             if (count($validator) > 0) {
-
                 $this->requestData['errors'] = $validator;
                 return;
             }
 
             $this->requestData['result'] = $this->calculateResult();
-            
         }
         return $this->requestData;
     }
 
-    private function calculateResult() {
+    private function calculateResult()
+    {
         switch ($this->requestData['operator']) {
             case '+':
                 $calculator = new Calculator(new Adder);
@@ -62,7 +61,7 @@ class SiteController  implements ControllerInterface
                 break;
         }
         return $calculator->calculate(
-            $this->requestData['first_operand'], 
+            $this->requestData['first_operand'],
             $this->requestData['second_operand']
         )->getResult();
     }
