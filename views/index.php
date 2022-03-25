@@ -40,7 +40,9 @@
                     }
                 }
                 if (isset($data['result'])) {
-                    echo '<div class="mt-2"> <p class="text-success"> Action result: ' . $data['result'] . '</p> </div>';
+                    echo '<div class="mt-2">
+                    <p class="text-success"> Action result: ' . $data['result'] . '</p>
+                    </div>';
                 }
                 ?>
 
